@@ -1,0 +1,19 @@
+{
+    "status": "ok",
+    "totalResults": 1,
+    "articles": [
+        {
+            "source": {
+                "id": "the-verge",
+                "name": "The Verge"
+            },
+            "author": "Jess Weatherbed",
+            "title": "Apple’s iPhone 17 lineup is looking a little Pixelated - The Verge",
+            "description": "Leaked CAD renders of what are purported to be the iPhone 17, 17 Pro, 17 Pro Max, and 17 Air — feature a Pixel-like rectangular camera bar.",
+            "url": "https://www.theverge.com/news/618190/apple-iphone-17-camera-module-leaks-renders",
+            "urlToImage": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/02/Majin-Bu-iphone-17-cad-renders.jpg?quality=90&strip=all&crop=0%2C10.732984293194%2C100%2C78.534031413613&w=1200",
+            "publishedAt": "2025-02-24T13:40:37Z",
+            "content": "The upcoming Pro and Air models may feature a wider, pill-shaped rear camera module similar to Googles Pixel 9.\r\nThe upcoming Pro and Air models may feature a wider, pill-shaped rear camera module si… [+1884 chars]"
+        }
+    ]
+}

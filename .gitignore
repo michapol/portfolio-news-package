@@ -4,9 +4,15 @@
 
 ## Mac filesystem
 .DS_Store
+/.build
+/Packages
 
 ## User settings
 xcuserdata/
+DerivedData/
+.swiftpm/configuration/registries.json
+.swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
+.netrc
 
 ## Obj-C/Swift specific
 *.hmap

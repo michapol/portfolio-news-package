@@ -7,9 +7,9 @@
 
 import Foundation
 
-@testable import News
+@testable import NewsService
 
-final class MockNetworkService: RequestData {
+final class MockNetworkService: RequestData, @unchecked Sendable {
     // MARK: - makeServiceRequest
 
     var makeServiceRequestValues = [MakeServiceRequestValues]()

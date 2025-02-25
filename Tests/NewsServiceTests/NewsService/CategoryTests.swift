@@ -7,7 +7,7 @@
 
 import Testing
 
-@testable import News
+@testable import NewsService
 
 @Suite("Category Tests")
 struct CategoryTests {

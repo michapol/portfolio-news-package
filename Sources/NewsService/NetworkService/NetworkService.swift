@@ -18,7 +18,7 @@ final class NetworkService {
         self.dependencies = dependencies
     }
 
-    private func buildHeaders(apiKey: String) throws -> [AnyHashable : Any] {
+    private func buildHeaders(apiKey: String) -> [AnyHashable : Any] {
         ["Authorization": "Bearer \(apiKey)"]
     }
 }
@@ -26,7 +26,7 @@ final class NetworkService {
 extension NetworkService: RequestData {
     func makeServiceRequest(apiKey: String, service: ServiceRequestProtocol) async throws -> Data {
         let configuration = URLSessionConfiguration.default
-        configuration.httpAdditionalHeaders = try buildHeaders(apiKey: apiKey)
+        configuration.httpAdditionalHeaders = buildHeaders(apiKey: apiKey)
 
         let session = dependencies.urlSession(configuration)
         let urlRequest = try service.urlRequest

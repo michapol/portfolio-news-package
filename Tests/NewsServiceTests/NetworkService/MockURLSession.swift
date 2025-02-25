@@ -7,9 +7,9 @@
 
 import Foundation
 
-@testable import News
+@testable import NewsService
 
-final class MockURLSession: URLSessionProtocol {
+final class MockURLSession: URLSessionProtocol, @unchecked Sendable {
     // MARK: - Configuration
 
     var configurationValue = [URLSessionConfiguration]()

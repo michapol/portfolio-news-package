@@ -5,7 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "NewsService",
-    platforms: [.iOS(.v13), .macOS(.v11)],
+    platforms: [.iOS(.v15), .macOS(.v11)],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
@@ -19,7 +19,8 @@ let package = Package(
             name: "NewsService"),
         .testTarget(
             name: "NewsServiceTests",
-            dependencies: ["NewsService"]
+            dependencies: ["NewsService"],
+            resources: [.process("Resources")]
         ),
     ]
 )

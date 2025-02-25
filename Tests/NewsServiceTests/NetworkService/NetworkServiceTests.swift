@@ -8,14 +8,14 @@
 import Foundation
 import Testing
 
-@testable import News
+@testable import NewsService
 
 @Suite("Network Service Tests")
 struct NetworkServiceTests {
     var sut: NetworkService!
 
     let urlSession = MockURLSession()
-    lazy var urlSessionClosure: (URLSessionConfiguration) -> URLSessionProtocol = { [weak urlSession] configuration in
+    lazy var urlSessionClosure: @Sendable (URLSessionConfiguration) -> URLSessionProtocol = { [weak urlSession] configuration in
         urlSession!.configurationValue.append(configuration)
         return urlSession!
     }

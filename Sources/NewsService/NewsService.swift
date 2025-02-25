@@ -7,7 +7,7 @@
 
 import Foundation
 
-public protocol NewsProvider {
+public protocol NewsProvider: Sendable {
     func getHeadlines(for category: NewsCategory) async throws -> Data
 }
 
@@ -28,7 +28,7 @@ extension NewsService: NewsProvider {
 }
 
 extension NewsService {
-    public struct Dependencies {
+    public struct Dependencies: Sendable {
         let networkService: RequestData
 
         public static var `default`: Self {

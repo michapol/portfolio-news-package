@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol RequestData {
+protocol RequestData: Sendable {
     func makeServiceRequest(apiKey: String, service: ServiceRequestProtocol) async throws -> Data
 }
 
@@ -37,8 +37,8 @@ extension NetworkService: RequestData {
 }
 
 extension NetworkService {
-    struct Dependencies {
-        let urlSession: (URLSessionConfiguration) -> URLSessionProtocol
+    struct Dependencies: Sendable {
+        let urlSession: @Sendable (URLSessionConfiguration) -> URLSessionProtocol
 
         static var `default`: Self {
             .init(

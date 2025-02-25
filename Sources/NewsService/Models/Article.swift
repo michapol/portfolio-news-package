@@ -12,11 +12,11 @@ struct Response: Decodable {
 }
 
 public struct Article {
-    let author: String
+    let author: String?
     let title: String
-    let description: String
+    let description: String?
     let publishedAt: Date
-    let urlToImage: URL
+    let urlToImage: URL?
 }
 
 extension Article: Equatable {}

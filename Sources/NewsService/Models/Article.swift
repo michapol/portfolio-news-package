@@ -7,16 +7,12 @@
 
 import Foundation
 
-struct Response: Decodable {
-    let articles: [Article]
-}
-
 public struct Article {
-    let author: String?
-    let title: String
-    let description: String?
-    let publishedAt: Date
-    let urlToImage: URL?
+    public let author: String?
+    public let title: String
+    public let description: String?
+    public let publishedAt: Date
+    public let urlToImage: URL?
 }
 
 extension Article: Equatable {}
